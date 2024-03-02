@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;    
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+p{
+    font-size: 17px;
+}
+
+.header{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 5px grey;
+    z-index: 100;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.leftside{
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.nestlogo{
+    height: 60px;
+    width: auto;
+}
+
+.title{
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.middle{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightside{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.translation{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    margin-top: 80px;
+    height: 200vh;
+    width: 100%;
+    z-index: 0;
+}
+
+.volleyballpositions h1{
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.volleyballpositions p{
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.courts{
+    display: flex;
+    width: 100%;
+}
+
+.courtpositions{
+    height: 400px;
+    width: auto;
+    display: flex;
+    margin-left: 30px;
+}
+
+.lol{
+    height: 360px;
+    width: 360px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.round{
+    height: 80px;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-left: 60px;
+}
+
+.round2{
+    height: 80px;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-right: 60px;
+}
+
+.attackline{
+    height: 360px;
+    width: 1px;
+    border: 1px solid black;
+    background-color: black;
+    position: absolute;
+    margin-left: 120px;
+}
+
+.attackline2{
+    height: 360px;
+    width: 1px;
+    border: 1px solid black;
+    background-color: black;
+    position: absolute;
+    margin-right: 120px;
+}
+
+.courtdimensions{
+    height: 400px;
+    width: auto;
+    display: flex;
+    margin-left: 100px;
+}
+
+.courtdimensions p{
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+.net{
+    position: absolute;
+    margin-top: 370px;
+    right: 680px;
+}
+
+.al{
+    position: absolute;
+    margin-top: 370px;
+    right: 770px;
+}
+
+.sl{
+    position: absolute;
+    margin-top: 340px;
+    right: 415px;
+}
+
+.el{
+    position: absolute;
+    margin-top: 170px;
+    right: 335px;
+}
+
+.sz{
+    height: 360px;
+    width: 250px;
+    border-top: 3px dotted black;
+    border-right: 3px dotted black;
+    border-bottom: 3px dotted black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sz p{
+    margin: 0;
+}
