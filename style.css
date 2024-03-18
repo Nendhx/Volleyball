@@ -73,7 +73,7 @@ a{
 }
 
 .container{
-    margin-top: 80px;
+    margin-top: 100px;
     height: 200vh;
     width: 100%;
     z-index: 0;
@@ -97,14 +97,14 @@ a{
 
 .courtpositions{
     height: 400px;
-    width: auto;
+    width: 40%;
     display: flex;
     margin-left: 30px;
 }
 
 .lol{
     height: 360px;
-    width: 360px;
+    width: 50%;
     border: 3px solid black;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -158,9 +158,9 @@ a{
 
 .courtdimensions{
     height: 400px;
-    width: auto;
+    width: 60%;
     display: flex;
-    margin-left: 100px;
+    margin-left: 2%;
 }
 
 .courtdimensions p{
@@ -181,15 +181,14 @@ a{
 }
 
 .sl{
-    position: absolute;
-    margin-top: 340px;
-    right: 415px;
+    margin: 0;
+    position: relative;
+    margin-top: 100%;
 }
 
 .el{
-    position: absolute;
-    margin-top: 170px;
-    right: 335px;
+    margin: 0;
+    position: relative;
 }
 
 .sz{
@@ -205,4 +204,59 @@ a{
 
 .sz p{
     margin: 0;
+}
+
+.schoolranking{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    height: 300px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px gray;
+    border-radius: 10px;
+}
+
+.box div{
+    display: flex;
+}
+
+.searchnames{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: solid 1px gray;
+}
+
+.searchnames div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchnames div input{
+    height: 25px;
+    width: 70%;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+
+.roles{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+#caretdown{
+    margin-left: 100px;
 }
