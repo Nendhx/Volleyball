@@ -1,42 +1,128 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Roboto Condensed, sans-serif;
+    color: white;
 }
 
 body{
     height: 100vh;
-    width: 100%;    
+    width: 100%;
+    background-color: #0e0c15;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
 
+.backglow{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    right: 0;
+    top: 100px;
+    background-color: #0fc;
+    border-radius: 9999px;
+    filter: blur(25rem);
+    z-index: 0;
+}
+
+.backglow1{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    left: -150px;
+    top: 1000px;
+    background-color: #c79;
+    border-radius: 9999px;
+    filter: blur(25rem);
+    z-index: 0;
+}
+
+.backglow2{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    right: 0;
+    top: 1600px;
+    background-color: #b93;
+    border-radius: 9999px;
+    filter: blur(25rem);
+    z-index: 0;
+}
+
+.backbody{
+    position: relative;
+    padding-top: 100px;
+    height: 200vh;
+    width: 100%;
+}
+
 p{
     font-size: 17px;
+}
+
+#alert{
+    position: fixed;
+    height: 0;
+    width: 100vw;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#alertbg{
+    height: 100%;
+    width: 100%;
+    z-index: 300;
+    background-color: grey;
+    opacity: 30%;
+}
+
+#alertbox{
+    position: absolute;
+    height: auto;
+    max-width: 200px;
+    width: auto;
+    background-color: #474349;
+    border-radius: 5px;
+    z-index: 350;
+    padding: 20px;
+
 }
 
 .header{
     height: 80px;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0 2px 5px grey;
     z-index: 100;
-    background-color: white;
+    backdrop-filter: blur(30px);
+}
+
+.header p{
+    color: gray;
+    font-weight: bold;
+    transition: ease 150ms;
+}
+
+.header p:hover{
+    color: white;
+    transition: ease 150ms;
+    cursor: pointer;
 }
 
 a{
     text-decoration: none;
-    color: black;
 }
 
 .leftside{
-    width: 150px;
+    width: 250px;
     display: flex;
     align-items: center;
 }
@@ -50,7 +136,7 @@ a{
     font-size: 30px;
     margin-left: 10px;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 .middle{
@@ -60,20 +146,212 @@ a{
 }
 
 .rightside{
-    width: 150px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     font-size: 17px;
 }
 
 .translation{
-    width: 70px;
+    width: 60px;
     display: flex;
     justify-content: space-between;
 }
 
+#userIcon{
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+#User{
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+#signout{
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+#loginScreen{
+    position: fixed;
+    height: 0;
+    width: 100vw;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #474349;
+    opacity: 60%;
+    z-index: 150;
+}
+
+#logx{
+    position: absolute;
+    margin-bottom: 200px;
+    margin-left: 230px;
+    height: 30px;
+    width: 40px;
+    color: red;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 150ms;
+    z-index: 250;
+}
+
+#logx:hover{
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: ease 150ms;
+}
+
+.bx{
+    height: 250px;
+    width: 300px;
+    background-color: #474349;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.bx div{
+    height: 220px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 200;
+}
+
+.bx input{
+    border: 1px solid gray;
+    height: 30px;
+    width: 246px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.bx button{
+    height: 30px;
+    width: 100%;
+    background-color: purple;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 15px;
+    z-index: 200;
+}
+
+.bx button:hover{
+    background-color: #606;
+    cursor: pointer;
+}
+
+#signupScreen{
+    position: fixed;
+    height: 0;
+    width: 100vw;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: 200;
+}
+
+#signx{
+    position: absolute;
+    margin-bottom: 280px;
+    margin-left: 230px;
+    height: 30px;
+    width: 40px;
+    color: red;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 150ms;
+    z-index: 250;
+}
+
+#signx:hover{
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: ease 150ms;
+}
+
+.bx1{
+    height: 330px;
+    width: 300px;
+    background-color: #474349;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.bx1 div{
+    height: 300px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 200;
+}
+
+.bx1 input{
+    border: 1px solid gray;
+    height: 30px;
+    width: 246px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.bx1 button{
+    height: 30px;
+    width: 100%;
+    background-color: purple;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 15px;
+    z-index: 200;
+}
+
+.bx1 button:hover{
+    background-color: #606;
+    cursor: pointer;
+}
+
 .container{
-    margin-top: 100px;
     height: 200vh;
     width: 100%;
     z-index: 0;
@@ -86,26 +364,25 @@ a{
 }
 
 .volleyballpositions p{
-    margin-left: 20px;
     font-weight: bold;
 }
 
 .courts{
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
 }
 
 .courtpositions{
     height: 400px;
-    width: 40%;
+    width: 720px;
     display: flex;
-    margin-left: 30px;
 }
 
 .lol{
     height: 360px;
-    width: 50%;
-    border: 3px solid black;
+    width: 360px;
+    border: 3px solid #979399;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -115,7 +392,7 @@ a{
 .round{
     height: 80px;
     width: 80px;
-    border: 3px solid black;
+    border: 3px solid #979399;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -128,7 +405,7 @@ a{
 .round2{
     height: 80px;
     width: 80px;
-    border: 3px solid black;
+    border: 3px solid #979399;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -141,8 +418,8 @@ a{
 .attackline{
     height: 360px;
     width: 1px;
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid #979399;
+    background-color: #979399;
     position: absolute;
     margin-left: 120px;
 }
@@ -150,53 +427,55 @@ a{
 .attackline2{
     height: 360px;
     width: 1px;
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid #979399;
+    background-color: #979399;
     position: absolute;
     margin-right: 120px;
 }
 
 .courtdimensions{
     height: 400px;
-    width: 60%;
+    width: 960px;
     display: flex;
-    margin-left: 2%;
 }
 
 .courtdimensions p{
-    margin-left: 60px;
     font-weight: bold;
+}
+
+.bz{
+    margin-left: 60px;
 }
 
 .net{
     position: absolute;
     margin-top: 370px;
-    right: 680px;
+    margin-left: 350px;
 }
 
 .al{
     position: absolute;
     margin-top: 370px;
-    right: 770px;
+    margin-left: 200px;
 }
 
 .sl{
     margin: 0;
-    position: relative;
-    margin-top: 100%;
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 120px;
 }
 
 .el{
-    margin: 0;
-    position: relative;
+    position: absolute;
+    margin-left: 290px;
 }
 
 .sz{
     height: 360px;
-    width: 250px;
-    border-top: 3px dotted black;
-    border-right: 3px dotted black;
-    border-bottom: 3px dotted black;
+    width: 240px;
+    border: 3px dotted #979399;
+    border-left: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,50 +492,92 @@ a{
 }
 
 .box{
-    height: 300px;
+    height: 350px;
     width: 40%;
     display: flex;
     flex-direction: column;
     border: solid 2px gray;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .box div{
     display: flex;
 }
 
-.searchnames{
+.searchhead{
     display: flex;
     height: 50px;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     border-bottom: solid 1px gray;
 }
 
-.searchnames div{
-    width: 50%;
+.searchnames{
+    width: 70%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.searchnames div input{
-    height: 25px;
-    width: 70%;
-    border: solid 2px black;
-    border-radius: 5px;
+input{
+    height: 50px;
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.roles{
-    height: 100px;
-    width: 200px;
+.searchroles{
+    height: 50px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #979399;
+    overflow: hidden;
+    transition: ease 150ms;
+}
+
+.searchroles:hover{
+    background-color: #474349;
+    cursor: pointer;
+    transition: ease 150ms;
+}
+
+#roles{
+    height: 0;
+    visibility: hidden;
+    width: auto;
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
+    margin-top: 0;
+    margin-left: 535px;
+    border: 2px solid #575359;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-#caretdown{
-    margin-left: 100px;
+.roles{
+    width: 130px;
+}
+
+li{
+    height: 35px;
+    width: 170px;
+    list-style-type: none;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    transition: ease 200ms;
+}
+
+li:hover{
+    background-color: #474349;
+    transition: ease 200ms;
+    cursor: pointer;
 }

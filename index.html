@@ -8,96 +8,140 @@
     <script src="https://kit.fontawesome.com/8c4ff80391.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="alert">
+        <div id="alertbg"></div>
+        <p id="alertbox"></p>
+    </div>
+    <div id="loginScreen">
+        <div class="bg"></div>
+        <div class="bx">
+            <i id="logx" class="fa-solid fa-xmark"></i>
+            <div>
+                <p>Username</p>
+                <input id="logUsername" type="text">
+                <p>Password</p>
+                <input id="logPassword" type="password">
+                <button onclick="Login()" id="loginButton">Login</button>
+            </div>
+        </div>
+    </div>
+    <div id="signupScreen">
+        <div class="bg"></div>
+        <div class="bx1">
+            <i id="signx" class="fa-solid fa-xmark"></i>
+            <div>
+                <p>Username</p>
+                <input id="signUsername" type="text">
+                <p>Password</p>
+                <input id="signPassword" type="password">
+                <p>Confirm Password</p>
+                <input id="confirmPassword" type="password">
+                <button onclick="Signup()" id="signupButton">Sign Up</button>
+            </div>
+        </div>
+    </div>
     <div class="header">
         <a href="#" class="leftside">
-            <img class="nestlogo" src="https://m.zangia.mn/l/f/7/CH-DY0G514-YVBKFW7-NJQYA7K-Z6.jpg">
-            <p class="title">Nest Volleyball</p>
+            <img class="nestlogo" src="https://cdn1.sportngin.com/attachments/call_to_action/36a1-177474552/BALL_purple_large.png">
+            <h1 class="title">Nest Volleyball</h1>
         </a>
         <div class="middle">
-            <div>Volleyball Rules</div>
-            <div>Volleyball Positions</div>
-            <div>School Ranking</div>
+            <p>Volleyball Rules</p>
+            <p>Volleyball Positions</p>
+            <p>School Ranking</p>
         </div>
         <div class="rightside">
             <div class="translation">
                 <p>EN</p>
-                <p>|</p>
+                <span>|</span>
                 <p>MN</p>
             </div>
-            <div class="login">Login</div>
+            <div>
+                <i id="userIcon" class="fa-solid fa-user" style="color: #ffffff;"></i>
+                <span id="User"></span>
+            </div>
+            <p onclick="Signout()" id="signout">Sign out</p>
+            <p id="login" style="overflow: hidden;">Login</p>
+            <p id="signup" style="overflow: hidden;">Sign Up</p>
         </div>
     </div>
-    <div class="container">
-        <div class="volleyballpositions">
-            <h1>Volleyball Positions</h1>
-            <div class="courts">
-                <div class="courtpositions">
-                    <div class="lol">
-                        <div class="round">5</div>
-                        <div class="round">4</div>
-                        <div class="round">6</div>
-                        <div class="round">3</div>
-                        <div class="round">1</div>
-                        <div class="round">2</div>
-                        <div class="attackline"></div>
-                    </div>
-                    <div class="lol">
-                        <div class="round2">RH</div>
-                        <div class="round2">S</div>
-                        <div class="round2">MB</div>
-                        <div class="round2">MB/L</div>
-                        <div class="round2">LH</div>
-                        <div class="round2">RH</div>
-                        <div class="attackline2"></div>
-                    </div>
-                </div>
-                <div class="courtdimensions">
-                    <div class="lol">
-                        <p>Back Zone</p>
-                        <div class="attackline"></div>
-                        <p>Front Zone</p>
-                    </div>
-                    <div class="lol">
-                        <div class="attackline2"></div>
-                        <p class="sl">Sideline</p>
-                        <p class="el">Endline</p>
-                    </div>
-                    <div class="sz">
-                        <p>Service Zone</p>
-                    </div>
-                    <p class="net">Net</p>
-                    <p class="al">Attack Line</p>
-                    
-                </div>
-            </div>
-            <p>RH - Rightside Hitter</p>
-            <p>LH - Leftside Hitter</p>
-            <p>MB - Middle Blocker</p>
-            <p>L - Libero</p>
-            <p>S - Setter</p>
-        </div>
-        <div class="schoolranking">
-            <div class="box">
-                <div class="searchnames">
-                    <div>
-                        <input type="search">
-                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                    </div>
-                    <div>
-                        <div class="roles">
-                            <div>All</div>
-                            <div>Setter</div>
-                            <div>Rightside Hitter</div>
-                            <div>Leftside Hitter</div>
-                            <div>Middle Blocker</div>
-                            <div>Libero</div>
+    <div class="backglow"></div>
+    <div class="backglow1"></div>
+    <div class="backglow2"></div>
+    <div class="backbody">
+        <div class="container">
+            <div class="volleyballpositions">
+                <h1>Volleyball Positions</h1>
+                <div class="courts">
+                    <div class="courtpositions">
+                        <div class="lol">
+                            <div class="round">5</div>
+                            <div class="round">4</div>
+                            <div class="round">6</div>
+                            <div class="round">3</div>
+                            <div class="round">1</div>
+                            <div class="round">2</div>
+                            <div class="attackline"></div>
                         </div>
-                        <i id="caretdown" class="fa-solid fa-caret-down"></i>
+                        <div class="lol">
+                            <div class="round2">RH</div>
+                            <div class="round2">S</div>
+                            <div class="round2">MB</div>
+                            <div class="round2">MB/L</div>
+                            <div class="round2">LH</div>
+                            <div class="round2">RH</div>
+                            <div class="attackline2"></div>
+                        </div>
+                    </div>
+                    <div class="courtdimensions">
+                        <div class="lol">
+                            <p class="bz">Back Zone</p>
+                            <div class="attackline"></div>
+                            <p class="bz">Front Zone</p>
+                        </div>
+                        <div class="lol">
+                            <div class="attackline2"></div>
+                            <p class="sl">Sideline</p>
+                            <p class="el">Endline</p>
+                        </div>
+                        <div class="sz">
+                            <p>Service Zone</p>
+                        </div>
+                        <p class="net">Net</p>
+                        <p class="al">Attack Line</p>
                     </div>
                 </div>
-                <div class="ranking"></div>
+                <p>RH - Rightside Hitter</p>
+                <p>LH - Leftside Hitter</p>
+                <p>MB - Middle Blocker</p>
+                <p>L - Libero</p>
+                <p>S - Setter</p>
+            </div>
+            <div class="schoolranking">
+                <div class="box">
+                    <div class="searchhead">
+                        <div class="searchnames">
+                            <input type="search" placeholder="Search names...">
+                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                        </div>
+                        <div id="roledrpdwn" class="searchroles">
+                            <span id="role" class="roles">All</span>
+                            <i id="caretdown" class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <ul id="roles">
+                            <li onclick="changeroles('All')" id="roleAll">All</li>
+                            <li onclick="changeroles('RH')" id="roleRH">Rightside Hitter</li>
+                            <li onclick="changeroles('LH')" id="roleLH">Leftside Hitter</li>
+                            <li onclick="changeroles('MB')" id="roleMB">Middle Blocker</li>
+                            <li onclick="changeroles('L')" id="roleL">Libero</li>
+                            <li onclick="changeroles('S')" id="roleS">Setter</li>
+                        </ul>
+                    </div>
+                    <div id="ranking"></div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
