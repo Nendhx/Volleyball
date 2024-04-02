@@ -9,6 +9,89 @@ let a = [
     }
 ];
 
+let p = [
+    {
+        player: "TJ",
+        role: "Leftside Hitter",
+        rank: 1
+    },
+    {
+        player: "Shijir",
+        role: "Leftside Hitter",
+        rank: 2
+    },
+    {
+        player: "Bat-Uchral",
+        role: "Setter",
+        rank: 3
+    },
+    {
+        player: "Ermuun",
+        role: "Setter",
+        rank: 4
+    },
+    {
+        player: "Badmaarag",
+        role: "Leftside Hitter",
+        rank: 5
+    },
+    {
+        player: "Erkhem",
+        role: "Setter",
+        rank: 6
+    },
+    {
+        player: "Bulgaa",
+        role: "Rightside Hitter",
+        rank: 7
+    },
+    {
+        player: "Tulga",
+        role: "Leftside Hitter",
+        rank: 8
+    },
+    {
+        player: "Chinguun",
+        role: "Leftside Hitter",
+        rank: 9
+    },
+    {
+        player: "Tuvshin",
+        role: "Libero",
+        rank: 10
+    },
+    {
+        player: "Sanduijav",
+        role: "Setter",
+        rank: 11
+    },
+    {
+        player: "Tugs-Erdene",
+        role: "Middle Blocker",
+        rank: 12
+    },
+    {
+        player: "Bilguun",
+        role: "Libero",
+        rank: 13
+    },
+    {
+        player: "Zolboo",
+        role: "Libero",
+        rank: 14
+    },
+]
+
+function startranking(){
+    let box = "";
+    for(let i = 0; i < p.length; i++){
+        box += '<div class="lil"><p class="nomer">#' + (i + 1).toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">' + p[i].role + "</p></div>";
+    }
+    document.getElementById("ranking").innerHTML = box;
+}
+
+window.onload = startranking;
+
 let cc = 0;
 let role = document.getElementById('role');
 let roles = document.getElementById('roles');
@@ -24,7 +107,7 @@ document.getElementById('roledrpdwn').addEventListener('click', function (){
     }
     else{
         roles.style.height = "0";
-        roles.style.marginTop = "0";
+        roles.style.marginTop = "300px";
         roles.style.visibility = "hidden";
         cc = 0;
     }
@@ -174,21 +257,71 @@ document.getElementById('signx').addEventListener('click', function (){
 function changeroles(a){
     if(a == "All"){
         role.innerHTML = "All";
+        let box = "";
+        for(let i = 0; i < p.length; i++){
+            box += '<div class="lil"><p class="nomer">#' + (i + 1).toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">' + p[i].role + "</p></div>";
+        }
+        document.getElementById("ranking").innerHTML = box;
     }
     if(a == "RH"){
         role.innerHTML = "Rightside Hitter";
+        let box = "";
+        let a = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Rightside Hitter"){
+                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Rightside Hitter</p></div>';
+                a++;
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
     }
     if(a == "LH"){
         role.innerHTML = "Leftside Hitter";
+        let box = "";
+        let a = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Leftside Hitter"){
+                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Leftside Hitter</p></div>';
+                a++;
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
     }
     if(a == "MB"){
         role.innerHTML = "Middle Blocker";
+        let box = "";
+        let a = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Middle Blocker"){
+                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Middle Blocker</p></div>';
+                a++;
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
     }
     if(a == "L"){
         role.innerHTML = "Libero";
+        let box = "";
+        let a = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Libero"){
+                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Libero</p></div>';
+                a++;
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
     }
     if(a == "S"){
         role.innerHTML = "Setter";
+        let box = "";
+        let a = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Setter"){
+                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Setter</p></div>';
+                a++;
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
     }
     roles.style.height = "0";
     roles.style.marginTop = "0";

@@ -11,7 +11,7 @@ body{
     background-color: #0e0c15;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -103,6 +103,10 @@ p{
     align-items: center;
     z-index: 100;
     backdrop-filter: blur(30px);
+}
+
+.header h1{
+    margin: 0;
 }
 
 .header p{
@@ -357,7 +361,7 @@ a{
     z-index: 0;
 }
 
-.volleyballpositions h1{
+h1{
     font-size: 25px;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -488,7 +492,7 @@ a{
 .schoolranking{
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .box{
@@ -560,6 +564,7 @@ input{
     border: 2px solid #575359;
     border-radius: 5px;
     overflow: hidden;
+    background-color: #0e0c15;
 }
 
 .roles{
@@ -580,4 +585,36 @@ li:hover{
     background-color: #474349;
     transition: ease 200ms;
     cursor: pointer;
+}
+
+#ranking{
+    height: 300px;
+    width: 100%;
+    display: flow;
+    flex-direction: column;
+    padding-top: 10px;
+    overflow-y: scroll;
+}
+
+.lil{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nomer{
+    margin-left: 20px;
+    width: 30px;
+}
+
+.pner{
+    margin-left: 10px;
+    width: 100px;
+}
+
+.prole{
+    margin-left: 400px;
+    width: 150px;
 }
