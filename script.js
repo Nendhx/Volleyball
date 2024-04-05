@@ -13,74 +13,72 @@ let p = [
     {
         player: "TJ",
         role: "Leftside Hitter",
-        rank: 1
     },
     {
         player: "Shijir",
         role: "Leftside Hitter",
-        rank: 2
     },
     {
         player: "Bat-Uchral",
         role: "Setter",
-        rank: 3
     },
     {
         player: "Ermuun",
         role: "Setter",
-        rank: 4
     },
     {
         player: "Badmaarag",
         role: "Leftside Hitter",
-        rank: 5
     },
     {
         player: "Erkhem",
         role: "Setter",
-        rank: 6
     },
     {
         player: "Bulgaa",
         role: "Rightside Hitter",
-        rank: 7
     },
     {
         player: "Tulga",
         role: "Leftside Hitter",
-        rank: 8
     },
     {
         player: "Chinguun",
         role: "Leftside Hitter",
-        rank: 9
     },
     {
         player: "Tuvshin",
         role: "Libero",
-        rank: 10
     },
     {
         player: "Sanduijav",
         role: "Setter",
-        rank: 11
     },
     {
         player: "Tugs-Erdene",
         role: "Middle Blocker",
-        rank: 12
     },
     {
         player: "Bilguun",
         role: "Libero",
-        rank: 13
     },
     {
         player: "Zolboo",
         role: "Libero",
-        rank: 14
     },
 ]
+
+document.getElementById("vbr").addEventListener('click', function (){
+    window.scrollTo(0, 0);
+})
+
+document.getElementById("vbp").addEventListener('click', function (){
+    window.scrollTo(0, 1900);
+})
+
+document.getElementById("sr").addEventListener('click', function (){
+    window.scrollTo(0, 3150);
+})
 
 function startranking(){
     let box = "";
@@ -93,7 +91,6 @@ function startranking(){
 window.onload = startranking;
 
 let cc = 0;
-let role = document.getElementById('role');
 let roles = document.getElementById('roles');
 let login = document.getElementById('loginScreen');
 let signup = document.getElementById('signupScreen');
@@ -254,77 +251,193 @@ document.getElementById('signx').addEventListener('click', function (){
     signup.style.visibility = "hidden";
 })
 
+let searchp = document.getElementById("search");
+let role = document.getElementById('role');
+
+searchp.addEventListener('input', function (){
+    let a = role.innerHTML;
+    let c = searchp.value.toLowerCase();
+    let box = "";
+    if(a == "All"){
+        for(let i = 0; i < p.length; i++){
+            if(p[i].player.toLowerCase().includes(c) == true){
+                box += '<div class="lil"><p class="nomer">#' + (i + 1).toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">' + p[i].role + "</p></div>";
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
+    }
+    if(a == "Rightside Hitter"){
+        let b = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Rightside Hitter"){
+                if(p[i].player.toLowerCase().includes(c) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Rightside Hitter</p></div>';
+                    b++;
+                }
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
+    }
+    if(a == "Leftside Hitter"){
+        let b = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Leftside Hitter"){
+                if(p[i].player.toLowerCase().includes(c) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Leftside Hitter</p></div>';
+                    b++;
+                }
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
+    }
+    if(a == "Middle Blocker"){
+        let b = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Middle Blocker"){
+                if(p[i].player.toLowerCase().includes(c) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Middle Blocker</p></div>';
+                    b++;
+                }
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
+    }
+    if(a == "Libero"){
+        let b = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Libero"){
+                if(p[i].player.toLowerCase().includes(c) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Libero</p></div>';
+                    b++;
+                }
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
+    }
+    if(a == "Setter"){
+        let b = 1;
+        for(let i = 0; i < p.length; i++){
+            if(p[i].role == "Setter"){
+                if(p[i].player.toLowerCase().includes(c) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Setter</p></div>';
+                    b++;
+                }
+            }
+        }
+        document.getElementById("ranking").innerHTML = box;
+    }
+    if(box == ""){
+        document.getElementById('tansp').style.visibility = "visible";
+    }
+    else{
+        document.getElementById('tansp').style.visibility = "hidden";
+    }
+    roles.style.height = "0";
+    roles.style.marginTop = "0";
+    roles.style.visibility = "hidden";
+    cc = 0;
+})
+
 function changeroles(a){
+    let box = "";
     if(a == "All"){
         role.innerHTML = "All";
-        let box = "";
         for(let i = 0; i < p.length; i++){
-            box += '<div class="lil"><p class="nomer">#' + (i + 1).toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">' + p[i].role + "</p></div>";
+            if(p[i].player.toLowerCase().includes(searchp.value.toLowerCase()) == true){
+                box += '<div class="lil"><p class="nomer">#' + (i + 1).toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">' + p[i].role + "</p></div>";
+            }
         }
         document.getElementById("ranking").innerHTML = box;
     }
     if(a == "RH"){
         role.innerHTML = "Rightside Hitter";
-        let box = "";
-        let a = 1;
+        let b = 1;
         for(let i = 0; i < p.length; i++){
             if(p[i].role == "Rightside Hitter"){
-                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Rightside Hitter</p></div>';
-                a++;
+                if(p[i].player.toLowerCase().includes(searchp.value.toLowerCase()) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Rightside Hitter</p></div>';
+                    b++;
+                }
             }
         }
         document.getElementById("ranking").innerHTML = box;
     }
     if(a == "LH"){
         role.innerHTML = "Leftside Hitter";
-        let box = "";
-        let a = 1;
+        let b = 1;
         for(let i = 0; i < p.length; i++){
             if(p[i].role == "Leftside Hitter"){
-                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Leftside Hitter</p></div>';
-                a++;
+                if(p[i].player.toLowerCase().includes(searchp.value.toLowerCase()) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Leftside Hitter</p></div>';
+                    b++;
+                }
             }
         }
         document.getElementById("ranking").innerHTML = box;
     }
     if(a == "MB"){
         role.innerHTML = "Middle Blocker";
-        let box = "";
-        let a = 1;
+        let b = 1;
         for(let i = 0; i < p.length; i++){
             if(p[i].role == "Middle Blocker"){
-                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Middle Blocker</p></div>';
-                a++;
+                if(p[i].player.toLowerCase().includes(searchp.value.toLowerCase()) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Middle Blocker</p></div>';
+                    b++;
+                }
             }
         }
         document.getElementById("ranking").innerHTML = box;
     }
     if(a == "L"){
         role.innerHTML = "Libero";
-        let box = "";
-        let a = 1;
+        let b = 1;
         for(let i = 0; i < p.length; i++){
             if(p[i].role == "Libero"){
-                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Libero</p></div>';
-                a++;
+                if(p[i].player.toLowerCase().includes(searchp.value.toLowerCase()) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Libero</p></div>';
+                    b++;
+                }
             }
         }
         document.getElementById("ranking").innerHTML = box;
     }
     if(a == "S"){
         role.innerHTML = "Setter";
-        let box = "";
-        let a = 1;
+        let b = 1;
         for(let i = 0; i < p.length; i++){
             if(p[i].role == "Setter"){
-                box += '<div class="lil"><p class="nomer">#' + a.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Setter</p></div>';
-                a++;
+                if(p[i].player.toLowerCase().includes(searchp.value.toLowerCase()) == true){
+                    box += '<div class="lil"><p class="nomer">#' + b.toString() + '</p><p class="pner">' + p[i].player + '</p><p class="prole">Setter</p></div>';
+                    b++;
+                }
             }
         }
         document.getElementById("ranking").innerHTML = box;
+    }
+    if(box == ""){
+        document.getElementById('tansp').style.visibility = "visible";
+    }
+    else{
+        document.getElementById('tansp').style.visibility = "hidden";
     }
     roles.style.height = "0";
     roles.style.marginTop = "0";
     roles.style.visibility = "hidden";
     cc = 0;
 }
+
+document.getElementById("rotate").addEventListener('click', function (){
+    let pos1 = document.getElementById("1");
+    let pos2 = document.getElementById("2");
+    let pos3 = document.getElementById("3");
+    let pos4 = document.getElementById("4");
+    let pos5 = document.getElementById("5");
+    let pos6 = document.getElementById("6");
+    let temp = pos6.value;
+    pos6.value = pos1.value;
+    pos1.value = pos2.value;
+    pos2.value = pos3.value;
+    pos3.value = pos4.value;
+    pos4.value = pos5.value;
+    pos5.value = temp;
+})

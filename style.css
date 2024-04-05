@@ -3,16 +3,30 @@
     padding: 0;
     font-family: Roboto Condensed, sans-serif;
     color: white;
+    scroll-behavior: smooth;
 }
+
+
 
 body{
     height: 100vh;
     width: 100%;
     background-color: #0e0c15;
+    
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+p{
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .backglow{
@@ -356,7 +370,7 @@ a{
 }
 
 .container{
-    height: 200vh;
+    height: 450vh;
     width: 100%;
     z-index: 0;
 }
@@ -367,13 +381,26 @@ h1{
     margin-bottom: 20px;
 }
 
+.vbrules{
+    margin-left: 40px;
+    max-width: 1200px;
+}
+
+.vbrules p{
+    margin-left: 15px;
+}
+
+h4{
+    margin: 0;
+}
+
 .volleyballpositions p{
     font-weight: bold;
 }
 
 .courts{
-    display: flex;
-    justify-content: space-evenly;
+    margin-left: 50px;
+    display: inline-block;
     width: 100%;
 }
 
@@ -381,6 +408,7 @@ h1{
     height: 400px;
     width: 720px;
     display: flex;
+    justify-content: end;
 }
 
 .lol{
@@ -414,7 +442,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     font-family: sans-serif;
     margin-right: 60px;
 }
@@ -571,7 +599,7 @@ input{
     width: 130px;
 }
 
-li{
+#roles li{
     height: 35px;
     width: 170px;
     list-style-type: none;
@@ -581,7 +609,7 @@ li{
     transition: ease 200ms;
 }
 
-li:hover{
+#roles li:hover{
     background-color: #474349;
     transition: ease 200ms;
     cursor: pointer;
@@ -617,4 +645,25 @@ li:hover{
 .prole{
     margin-left: 400px;
     width: 150px;
+}
+
+#rotate{
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    background-color: #333;
+    border: none;
+    margin: 3px;
+}
+
+#rotate:hover{
+    background-color: #575359;
+}
+
+#tansp{
+    position: absolute;
+    align-self: center;
+    margin-top: 180px;
+    color: #777379;
+    visibility: hidden;
 }
