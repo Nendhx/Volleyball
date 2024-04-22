@@ -6,8 +6,6 @@
     scroll-behavior: smooth;
 }
 
-
-
 body{
     height: 100vh;
     width: 100%;
@@ -32,61 +30,61 @@ h3{
 
 .backglow{
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     right: 0;
     top: 100px;
     background-color: #0fc;
     border-radius: 9999px;
-    filter: blur(25rem);
+    filter: blur(30rem);
     z-index: 0;
 }
 
 .backglow1{
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     left: 0;
     top: 1000px;
     background-color: #c79;
     border-radius: 9999px;
-    filter: blur(25rem);
+    filter: blur(30rem);
     z-index: 0;
 }
 
 .backglow2{
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     right: 0;
     top: 1900px;
     background-color: #b93;
     border-radius: 9999px;
-    filter: blur(25rem);
+    filter: blur(30rem);
     z-index: 0;
 }
 
 .backglow3{
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     left: 0;
     top: 2800px;
     background-color: #22c;
     border-radius: 9999px;
-    filter: blur(25rem);
+    filter: blur(30rem);
     z-index: 0;
 }
 
 .backglow4{
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     right: 0;
     top: 3700px;
     background-color: #828;
     border-radius: 9999px;
-    filter: blur(25rem);
+    filter: blur(30rem);
     z-index: 0;
 }
 
@@ -188,6 +186,7 @@ a{
     width: 250px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 17px;
 }
 
@@ -203,10 +202,8 @@ a{
     position: absolute;
 }
 
-#User{
-    width: 0;
-    overflow: hidden;
-    position: absolute;
+#userIcon:hover{
+    cursor: pointer;
 }
 
 #signout{
@@ -233,6 +230,7 @@ a{
     width: 100%;
     background-color: #474349;
     opacity: 60%;
+    filter: blur(30rem);
     z-index: 150;
 }
 

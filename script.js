@@ -12,7 +12,7 @@ let a = [
 let p = [
     {
         player: "TJ",
-        role: "Leftside Hitter",
+        role: "Rightside Hitter",
     },
     {
         player: "Shijir",
@@ -123,9 +123,6 @@ function Login(){
                 document.getElementById('alert').style.height = "100vh";
                 document.getElementById('userIcon').style.width = "auto"; // logged in
                 document.getElementById('userIcon').style.position = "static";
-                document.getElementById('User').style.position = "static";
-                document.getElementById('User').innerHTML = loguser.value;
-                document.getElementById('User').style.width = "auto";
                 document.getElementById('signout').style.width = "auto";
                 document.getElementById('signout').style.position = "static";
                 document.getElementById('login').style.width = "0";
@@ -174,9 +171,6 @@ function Signup(){
                 document.getElementById('alert').style.height = "100vh";
                 document.getElementById('userIcon').style.width = "auto"; // logged in
                 document.getElementById('userIcon').style.position = "static";
-                document.getElementById('User').style.position = "static";
-                document.getElementById('User').innerHTML = signuser.value;
-                document.getElementById('User').style.width = "auto";
                 document.getElementById('signout').style.width = "auto";
                 document.getElementById('signout').style.position = "static";
                 document.getElementById('login').style.width = "0";
@@ -199,7 +193,7 @@ function Signup(){
         }
     }
     else{
-        document.getElementById('alertbox').innerHTML = "Passwords doesn't match.";
+        document.getElementById('alertbox').innerHTML = "Passwords don't match.";
         document.getElementById('alertbox').style.backgroundColor = "red";
         document.getElementById('alert').style.height = "100vh";
         return;
@@ -212,9 +206,6 @@ function Signout(){
     document.getElementById('alert').style.height = "100vh";
     document.getElementById('userIcon').style.width = "0";
     document.getElementById('userIcon').style.position = "absolute";
-    document.getElementById('User').style.position = "absolute";
-    document.getElementById('User').innerHTML = "";
-    document.getElementById('User').style.width = "0";
     document.getElementById('signout').style.width = "0";
     document.getElementById('signout').style.position = "absolute";
     document.getElementById('login').style.width = "auto";
