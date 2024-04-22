@@ -229,7 +229,7 @@ a{
     height: 100%;
     width: 100%;
     /* background-color: #474349; */
-    opacity: 60%;
+    /* opacity: 60%; */
     backdrop-filter: blur(30px);
     z-index: 150;
 }
