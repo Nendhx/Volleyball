@@ -228,9 +228,7 @@ a{
     position: absolute;
     height: 100%;
     width: 100%;
-    /* background-color: #474349; */
-    /* opacity: 60%; */
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(10px);
     z-index: 150;
 }
 
